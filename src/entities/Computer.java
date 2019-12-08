@@ -1,6 +1,7 @@
 package entities;
 
 public class Computer {
+    private final Type type;
     private final Motherboard motherboard;
     private final CPU cpu;
     private final DataStore dataStore;
@@ -8,7 +9,8 @@ public class Computer {
     private final GraphicsCard graphicsCard;
     private final LiquidCooling liquidCooling;
 
-    public Computer(Motherboard motherboard, CPU cpu, DataStore dataStore, RAM ram, GraphicsCard graphicsCard, LiquidCooling liquidCooling) {
+    public Computer( Type type, Motherboard motherboard, CPU cpu, DataStore dataStore, RAM ram, GraphicsCard graphicsCard, LiquidCooling liquidCooling) {
+        this.type = type;
         this.motherboard = motherboard;
         this.cpu = cpu;
         this.dataStore = dataStore;
@@ -39,5 +41,9 @@ public class Computer {
 
     public LiquidCooling getLiquidCooling() {
         return liquidCooling;
+    }
+
+    public Type getType() {
+        return type;
     }
 }

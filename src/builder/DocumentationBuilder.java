@@ -2,7 +2,9 @@ package builder;
 
 import entities.*;
 
-public class ComputerBuilder implements Builder {
+import java.lang.management.ManagementFactory;
+
+public class DocumentationBuilder implements Builder {
     private Type type;
     private Motherboard motherboard;
     private CPU cpu;
@@ -46,11 +48,20 @@ public class ComputerBuilder implements Builder {
         this.liquidCooling = liquidCooling;
     }
 
-    public Computer getResult(){
-        if(type != null && motherboard != null && cpu != null && dataStore != null && ram != null) {
-            return new Computer(type, motherboard, cpu, dataStore, ram, graphicsCard, liquidCooling);
-        }else{
-            return null;
+
+    public void setDocumentationByComputer(Computer computer){
+        if(computer != null) {
+            this.type = computer.getType();
+            this.motherboard = computer.getMotherboard();
+            this.cpu = computer.getCpu();
+            this.dataStore = computer.getDataStore();
+            this.ram = computer.getRam();
+            this.graphicsCard = computer.getGraphicsCard();
+            this.liquidCooling = computer.getLiquidCooling();
         }
     }
+    public Documentation getResult(){
+        return new Documentation(type, motherboard, cpu, dataStore, ram, graphicsCard, liquidCooling);
+    }
+
 }

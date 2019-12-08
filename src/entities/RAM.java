@@ -28,4 +28,14 @@ public class RAM {
     public Integer getCapacity() {
         return capacity;
     }
+
+    @Override
+    public String toString() {
+        return "RAM{" +
+                "sdram=" + sdram +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", capacity=" + capacity +
+                '}';
+    }
 }

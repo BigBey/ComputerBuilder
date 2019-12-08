@@ -16,4 +16,12 @@ public class GraphicsCard {
     public String getModel() {
         return model;
     }
+
+    @Override
+    public String toString() {
+        return "GraphicsCard{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

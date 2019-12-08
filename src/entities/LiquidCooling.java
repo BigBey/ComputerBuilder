@@ -16,4 +16,12 @@ public class LiquidCooling {
     public String getModel() {
         return model;
     }
+
+    @Override
+    public String toString() {
+        return "LiquidCooling{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

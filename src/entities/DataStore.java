@@ -22,4 +22,13 @@ public class DataStore {
     public String getModel() {
         return model;
     }
+
+    @Override
+    public String toString() {
+        return "DataStore{" +
+                "drive=" + drive +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                '}';
+    }
 }

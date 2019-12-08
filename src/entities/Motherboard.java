@@ -1,12 +1,12 @@
 package entities;
 
 public class Motherboard {
-    private String model;
     private String manufacturer;
+    private String model;
 
-    public Motherboard(String model, String manufacturer) {
-        this.model = model;
+    public Motherboard(String manufacturer, String model) {
         this.manufacturer = manufacturer;
+        this.model = model;
     }
 
     public String getModel() {
@@ -15,5 +15,13 @@ public class Motherboard {
 
     public String getManufacturer() {
         return manufacturer;
+    }
+
+    @Override
+    public String toString() {
+        return "Motherboard{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                '}';
     }
 }

@@ -1,13 +1,13 @@
 package entities;
 
 public class CPU {
-    private String model;
     private String manufacturer;
+    private String model;
     private Double clockFrequency;
 
-    public CPU(String model, String manufacturer, Double clockFrequency) {
-        this.model = model;
+    public CPU(String manufacturer, String model, Double clockFrequency) {
         this.manufacturer = manufacturer;
+        this.model = model;
         this.clockFrequency = clockFrequency;
     }
 
@@ -21,5 +21,14 @@ public class CPU {
 
     public Double getClockFrequency() {
         return clockFrequency;
+    }
+
+    @Override
+    public String toString() {
+        return "CPU{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", clockFrequency=" + clockFrequency +
+                '}';
     }
 }

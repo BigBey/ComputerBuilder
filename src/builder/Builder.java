@@ -3,6 +3,7 @@ package builder;
 import entities.*;
 
 public interface Builder {
+    void setType(Type type);
     void setMotherboard(Motherboard motherboard);
     void setCPU(CPU cpu);
     void setDataStore(DataStore dataStore);
