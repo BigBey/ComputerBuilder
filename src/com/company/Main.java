@@ -24,6 +24,7 @@ public class Main {
             System.out.println("\nComputer documentation: \n" + documentation.toString());
         }catch (NullPointerException e){
             System.out.println("Computer isn't build or doesn't exist");
+            //
         }
     }
 }
